@@ -71,3 +71,10 @@ button:hover{
 .completed{
     text-decoration: line-through;
 }
+
+.clear{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+}

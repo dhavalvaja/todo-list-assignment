@@ -34,6 +34,11 @@ export default function App() {
     setcompletedTodo((list) => [...list, todo])
   }
 
+  function clearAll(){
+    localStorage.clear()
+    window.location.reload()
+  }
+
   useEffect(() => {
     localStorage.setItem("dataList", JSON.stringify(todoList))
     console.log(todoList)
@@ -50,6 +55,8 @@ export default function App() {
     <div className='container'>
 
       <h1>Todo List</h1>
+
+      <button className='clear' onClick={clearAll} >Clear All</button>
 
       <form onSubmit={handleSubmit}>
         <input type={'text'} value={todo} onChange={(e) => setTodo(e.target.value)} />
